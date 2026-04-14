@@ -6,6 +6,6 @@ class AutorModel(Base):
     __tablename__ = "autor"
 
     id_autor = Column(Integer, primary_key=True, autoincrement=True)
-    nome = Column(String(150), nullable=False)
+    nome = Column(String(100), nullable=False)
 
     livros = relationship("LivroModel", back_populates="autor")

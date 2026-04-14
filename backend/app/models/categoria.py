@@ -7,7 +7,7 @@ class CategoriaModel(Base):
     __tablename__ = "categoria"
 
     id_categoria = Column(Integer, primary_key=True, autoincrement=True)
-    categoria = Column(String(100), nullable=False, unique=True)
+    categoria = Column(String(50), nullable=False, unique=True)
 
     livros = relationship(
         "LivroModel",

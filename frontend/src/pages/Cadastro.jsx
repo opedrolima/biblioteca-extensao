@@ -1,5 +1,4 @@
-import React from 'react';
-import { User, Mail, Lock } from 'lucide-react';
+
 
 export default function App() {
   return (
@@ -7,7 +6,7 @@ export default function App() {
       className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "assets/library-background.png" }}
     >
-      <div className="bg-[#FFFFFF] rounded-[2.5rem] p-10 shadow-2xl w-full max-w-[380px] flex flex-col items-center">
+      <div className="bg-[#FFFFFF] rounded-[2.5rem] p-10 shadow-2xl w-full max-w-95 flex flex-col items-center">
         
         <h2 className="text-[#FF8A24] text-2xl font-bold mb-10 mt-2">
           Cadastro

@@ -45,8 +45,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white overflow-hidden font-sans pb-12">
-      <div className="w-full flex justify-center -mt-[120px] sm:-mt-[150px] mb-12">
-        <div className="w-[800px] h-[300px] bg-[#fca867] border-[4px] border-[#2b9bf4] rounded-[50%] flex items-end justify-center pb-8 gap-4 shadow-sm">
+      <div className="w-full flex justify-center -mt-30 sm:-mt-37.5 mb-12">
+        <div className="w-200 h-75 bg-[#fca867] border-4 border-[#2b9bf4] rounded-[50%] flex items-end justify-center pb-8 gap-4 shadow-sm">
           <div className="relative w-14 h-16 flex items-end">
             <div className="absolute right-0 bottom-0 w-10 h-16 bg-[#5c2ef4] rounded-sm shadow-sm"></div>
             <div className="absolute right-1 bottom-0 w-1 h-16 bg-[#4a1ed4] rounded-sm"></div>
@@ -64,7 +64,7 @@ export default function App() {
         
         <form
           onSubmit={handleAddEmprestimo}
-          className="bg-[#ebebeb] p-6 rounded-2xl w-full md:w-[350px] flex flex-col gap-4 shadow-[0_2px_10px_rgba(0,0,0,0.08)]"
+          className="bg-[#ebebeb] p-6 rounded-2xl w-full md:w-87.5 flex flex-col gap-4 shadow-[0_2px_10px_rgba(0,0,0,0.08)]"
         >
           <div className="flex gap-3">
             <input
@@ -73,7 +73,7 @@ export default function App() {
               value={novoEmprestimo.nomePessoa}
               onChange={handleInputChange}
               placeholder="NomePessoa"
-              className="flex-[3] w-full bg-white px-3 py-2.5 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-xs sm:text-sm font-bold outline-none focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
+              className="flex-3 w-full bg-white px-3 py-2.5 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-xs sm:text-sm font-bold outline-none focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
             />
             <input
               type="text"
@@ -81,7 +81,7 @@ export default function App() {
               value={novoEmprestimo.dataRecebeu}
               onChange={handleInputChange}
               placeholder="DataRecebeu"
-              className="flex-[2] w-full bg-white px-2 py-2.5 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-[11px] sm:text-xs font-bold outline-none text-center focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
+              className="flex-2 w-full bg-white px-2 py-2.5 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-[11px] sm:text-xs font-bold outline-none text-center focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
             />
           </div>
           
@@ -92,7 +92,7 @@ export default function App() {
               value={novoEmprestimo.nomeLivro}
               onChange={handleInputChange}
               placeholder="NomeLivro"
-              className="flex-[3] w-full bg-white px-3 py-2.5 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-xs sm:text-sm font-bold outline-none focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
+              className="flex-3 w-full bg-white px-3 py-2.5 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-xs sm:text-sm font-bold outline-none focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
             />
             <input
               type="text"
@@ -100,7 +100,7 @@ export default function App() {
               value={novoEmprestimo.dataDevolucao}
               onChange={handleInputChange}
               placeholder="DataDevolução"
-              className="flex-[2] w-full bg-white px-2 py-2.5 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-[11px] sm:text-xs font-bold outline-none text-center focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
+              className="flex-2 w-full bg-white px-2 py-2.5 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-[11px] sm:text-xs font-bold outline-none text-center focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
             />
           </div>
 
@@ -112,15 +112,15 @@ export default function App() {
           </button>
         </form>
 
-        <div className="bg-[#f2f2f2] p-8 rounded-2xl w-full md:w-[450px] flex flex-col gap-5 shadow-[0_2px_10px_rgba(0,0,0,0.08)] min-h-[450px]">
+        <div className="bg-[#f2f2f2] p-8 rounded-2xl w-full md:w-112.5 flex flex-col gap-5 shadow-[0_2px_10px_rgba(0,0,0,0.08)] min-h-112.5">
           
           {emprestimos.map((emprestimo) => (
-            <div key={emprestimo.id} className="bg-[#d9d9d9] rounded-xl p-4 flex justify-between items-center h-[88px] shadow-sm">
+            <div key={emprestimo.id} className="bg-[#d9d9d9] rounded-xl p-4 flex justify-between items-center h-22 shadow-sm">
               <div className="flex flex-col gap-1.5 text-black font-bold text-sm tracking-tight">
-                <span className="truncate max-w-[200px]">{emprestimo.nomePessoa}</span>
-                <span className="truncate max-w-[200px]">{emprestimo.nomeLivro}</span>
+                <span className="truncate max-w-50">{emprestimo.nomePessoa}</span>
+                <span className="truncate max-w-50">{emprestimo.nomeLivro}</span>
               </div>
-              <div className="bg-white rounded-full w-[45px] h-[45px] flex items-center justify-center flex-shrink-0 shadow-sm">
+              <div className="bg-white rounded-full w-11.25 h-11.25 flex items-center justify-center shrink-0 shadow-sm">
               </div>
             </div>
           ))}
@@ -128,7 +128,7 @@ export default function App() {
           {Array.from({ length: emptySlotsCount }).map((_, index) => (
             <div 
               key={`empty-${index}`} 
-              className="bg-[#d9d9d9] rounded-xl p-4 h-[88px] shadow-sm opacity-80"
+              className="bg-[#d9d9d9] rounded-xl p-4 h-22 shadow-sm opacity-80"
             ></div>
           ))}
 

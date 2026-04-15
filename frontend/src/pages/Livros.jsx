@@ -46,8 +46,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white overflow-hidden font-sans pb-12">
-      <div className="w-full flex justify-center -mt-[120px] sm:-mt-[150px] mb-12">
-        <div className="w-[800px] h-[300px] bg-[#fca867] border-[4px] border-[#2b9bf4] rounded-[50%] flex items-end justify-center pb-8 gap-4 shadow-sm">
+      <div className="w-full flex justify-center -mt-30 sm:-mt-37.5 mb-12">
+        <div className="w-200 h-75 bg-[#fca867] border-4 border-[#2b9bf4] rounded-[50%] flex items-end justify-center pb-8 gap-4 shadow-sm">
           <div className="relative w-14 h-16 flex items-end">
             <div className="absolute right-0 bottom-0 w-10 h-16 bg-[#5c2ef4] rounded-sm shadow-sm"></div>
             <div className="absolute right-1 bottom-0 w-1 h-16 bg-[#4a1ed4] rounded-sm"></div>
@@ -65,7 +65,7 @@ export default function App() {
         
         <form
           onSubmit={handleAddLivro}
-          className="bg-[#ebebeb] p-6 rounded-2xl w-full md:w-[350px] flex flex-col gap-4 shadow-[0_2px_10px_rgba(0,0,0,0.08)]"
+          className="bg-[#ebebeb] p-6 rounded-2xl w-full md:w-87.5 flex flex-col gap-4 shadow-[0_2px_10px_rgba(0,0,0,0.08)]"
         >
           <div className="flex gap-4">
             <input
@@ -82,7 +82,7 @@ export default function App() {
               value={novoLivro.quant}
               onChange={handleInputChange}
               placeholder="Quant"
-              className="w-[80px] bg-white px-4 py-2 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-sm font-bold outline-none text-center focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
+              className="w-20 bg-white px-4 py-2 rounded-full text-[#fc9d54] placeholder-[#fc9d54] text-sm font-bold outline-none text-center focus:ring-2 focus:ring-orange-300 transition-all shadow-sm"
             />
           </div>
           
@@ -103,17 +103,17 @@ export default function App() {
           </button>
         </form>
 
-        <div className="bg-[#f2f2f2] p-8 rounded-2xl w-full md:w-[500px] flex flex-col gap-5 shadow-[0_2px_10px_rgba(0,0,0,0.08)] min-h-[450px]">
+        <div className="bg-[#f2f2f2] p-8 rounded-2xl w-full md:w-125 flex flex-col gap-5 shadow-[0_2px_10px_rgba(0,0,0,0.08)] min-h-112.5">
           
           {livros.map((livro) => (
             <div key={livro.id} className="flex items-center gap-4">
               <div className="bg-[#d9d9d9] rounded-xl p-4 flex-1 flex justify-between items-center h-24 shadow-sm">
                 <div className="flex flex-col gap-1.5 text-black font-bold text-sm tracking-tight">
-                  <span className="truncate max-w-[180px]">{livro.nome}</span>
-                  <span className="truncate max-w-[180px]">{livro.categoria}</span>
-                  <span className="truncate max-w-[180px]">{livro.quant}</span>
+                  <span className="truncate max-w-45">{livro.nome}</span>
+                  <span className="truncate max-w-45">{livro.categoria}</span>
+                  <span className="truncate max-w-45">{livro.quant}</span>
                 </div>
-                <div className="bg-white rounded-full w-[60px] h-[60px] flex items-center justify-center flex-shrink-0 shadow-sm">
+                <div className="bg-white rounded-full w-15 h-15 flex items-center justify-center shrink-0 shadow-sm">
                   <span className="text-[9px] font-extrabold text-center leading-[1.1] text-black">
                     Estoque<br />Atual
                   </span>
@@ -122,7 +122,7 @@ export default function App() {
               
               <button
                 onClick={() => handleRemoveLivro(livro.id)}
-                className="w-[26px] h-[26px] bg-[#fc9d54] rounded-full text-white flex items-center justify-center text-xl font-bold shadow-sm hover:bg-[#f58d3d] active:scale-90 transition-all flex-shrink-0 pb-1"
+                className="w-6.5 h-6.5 bg-[#fc9d54] rounded-full text-white flex items-center justify-center text-xl font-bold shadow-sm hover:bg-[#f58d3d] active:scale-90 transition-all shrink-0 pb-1"
                 aria-label="Remover livro"
               >
                 -
@@ -133,7 +133,7 @@ export default function App() {
           {Array.from({ length: emptySlotsCount }).map((_, index) => (
             <div key={`empty-${index}`} className="flex items-center gap-4">
               <div className="bg-[#d9d9d9] rounded-xl p-4 flex-1 h-24 shadow-sm opacity-80"></div>
-              <div className="w-[26px] h-[26px] bg-[#fc9d54] rounded-full text-white flex items-center justify-center text-xl font-bold shadow-sm flex-shrink-0 opacity-80 pb-1">
+              <div className="w-6.5 h-6.5 bg-[#fc9d54] rounded-full text-white flex items-center justify-center text-xl font-bold shadow-sm shrink-0 opacity-80 pb-1">
                 -
               </div>
             </div>

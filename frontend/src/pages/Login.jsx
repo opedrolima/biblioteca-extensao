@@ -23,7 +23,7 @@ const Login = () => {
 
                 </div>
                
-                <button type="submit" className="flex justify-center items-center w-3xs h-15 bg-gray-400 text-3xl rounded-[1rem] mb-30 cursor-pointer">
+                <button type="submit" className="flex justify-center items-center w-3xs h-15 bg-gray-400 text-3xl rounded-2xl mb-30 cursor-pointer">
                     Entrar
                 </button>
                

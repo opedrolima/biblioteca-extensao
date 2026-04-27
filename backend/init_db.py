@@ -2,6 +2,7 @@ from app.core.database import engine, Base
 
 # Para testar o DB a IA me deu isso aqui:
 from app.models.associations import * 
+from app.models.auth_user import AuthUserModel
 from app.models.autor import AutorModel
 from app.models.categoria import CategoriaModel
 from app.models.contato import ContatoModel
@@ -19,7 +20,7 @@ def init_db():
    
     Base.metadata.create_all(bind=engine)
     
-    print("Tabelas criadas com sucesso! Vá checar o Supabase.")
+    print("Tabelas criadas com sucesso! checar o Supabase.")
 
 
 if __name__ == "__main__":

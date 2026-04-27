@@ -19,7 +19,7 @@ class EmprestimoRepository(BaseRepository[EmprestimoModel]):
         return (
             self.db.query(self.model)
             .filter(
-                self.model.data_devolucao is None,
+                self.model.data_devolucao.is_(None),
                 self.model.data_prevista < date.today(),
             )
             .all()

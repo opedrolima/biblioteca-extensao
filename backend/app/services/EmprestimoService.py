@@ -44,7 +44,7 @@ class EmprestimoService:
             self.db.query(EmprestimoModel)
             .filter(
                 EmprestimoModel.id_exemplar == data.id_exemplar,
-                EmprestimoModel.data_devolucao is None,
+                EmprestimoModel.data_devolucao.is_(None),
             )
             .first()
         )

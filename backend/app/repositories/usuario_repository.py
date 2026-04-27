@@ -16,4 +16,4 @@ class UsuarioRepository(BaseRepository[UsuarioModel]):
         return self.db.query(self.model).filter(self.model.cpf == cpf).first()
 
     def get_ativos(self) -> list[UsuarioModel]:
-        return self.db.query(self.model).filter(self.model.ativo).all()
+        return self.db.query(self.model).filter(self.model.status == True).all()
